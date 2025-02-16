@@ -50,3 +50,13 @@ function calculateRentalCost(days, carType, insurance = false) {
 //Test cases
 calculateRentalCost(3, "Economy", true); // Expected output: "Total Rental Cost: $180"
 calculateRentalCost(5, "Luxury", false); // Expected output: "Total Rental Cost: $500"
+
+//Task 5: Returning Values
+function calculateLoanPayment(principal, rate, time) { //Function to calculate the total loan payment 
+    let totalPayment = principal + (principal * rate * time);//Calculating the total payment
+    console.log (`Total Payment: $${totalPayment.toFixed(2)}`);//Logging the total payment
+}
+
+// Test cases
+calculateLoanPayment(1000, 0.05, 2); // "Total Payment: $1100.00"
+calculateLoanPayment(5000, 0.07, 3); // "Total Payment: $6050.00"
