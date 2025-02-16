@@ -14,7 +14,7 @@ calculateSalary(7000, 1000, 0.15); // Expected output: "Net Salary: $6950.00"
 let calculateDiscount = function(price, discountRate){
     let finalPrice = price - (price * discountRate); //Calculating the final price by subtracting the discount
     console.log(`Final Price: $${finalPrice.toFixed(2)}`); //Logging the final price 
-}
+};
 
 //Test cases
 calculateDiscount(100, 0.2); // Expected output: "Final Price: $80.00"
@@ -45,7 +45,7 @@ function calculateRentalCost(days, carType, insurance = false) {
         cost += days * 20;
     }
     console.log (`Total Rental Cost: $${cost}`); //Logging the total rental cost
-}
+};
 
 //Test cases
 calculateRentalCost(3, "Economy", true); // Expected output: "Total Rental Cost: $180"
@@ -55,7 +55,7 @@ calculateRentalCost(5, "Luxury", false); // Expected output: "Total Rental Cost:
 function calculateLoanPayment(principal, rate, time) { //Function to calculate the total loan payment 
     let totalPayment = principal + (principal * rate * time);//Calculating the total payment
     console.log (`Total Payment: $${totalPayment.toFixed(2)}`);//Logging the total payment
-}
+};
 
 // Test cases
 calculateLoanPayment(1000, 0.05, 2); // "Total Payment: $1100.00"
@@ -79,7 +79,7 @@ function createCartTracker() {//Closure function to track and maintain
         total += amount;// Adding the amount to the total
         console.log (`Total Cart Value: $${total}`); //Logging the updated toal cart value
     };
-}
+};
 
 // Creating a tracker instance
 let cart = createCartTracker();
@@ -92,7 +92,7 @@ cart(35); // "Total Cart Value: $55"
 function calculateSavings(years, amount) { //Recursive function that projects the savings growth by 5%
     if (years >= 10) return `Projected savings: $${amount.toFixed(2)}`; //Checking if the years reached 10
     return calculateSavings(years + 1, amount * 1.05);//Increasing the amount by 5% and calling the function recursively 
-}
+};
 
 // Test Cases
 console.log(calculateSavings(8, 1000)); // Expected output: "Projected Savings: $1102.50"
