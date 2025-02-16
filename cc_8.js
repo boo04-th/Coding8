@@ -87,3 +87,16 @@ let cart = createCartTracker();
 //// Test cases
 cart(20); // "Total Cart Value: $20"
 cart(35); // "Total Cart Value: $55"
+
+//Task 8: Recursion in JaveScript
+function calculateSavings(years, amount) { //Recursive function that projects the savings growth by 5%
+    if (years === 0) { 
+        return `Projected Savings: $${amount.toFixed(2)}`;
+    }
+    if (years > 10) years = 10; // Limit growth to 10 years
+    return calculateSavings(years - 1, amount * 1.05);  //Increasing the amount by 5% and calling the function recursively 
+}
+
+// Test Cases
+console.log(calculateSavings(8, 1000)); // Expected output: "Projected Savings: $1102.50"
+console.log(calculateSavings(5, 5000)); // Expected output: "Projected Savings: $6381.41"
