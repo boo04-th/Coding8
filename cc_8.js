@@ -13,7 +13,7 @@ calculateSalary(7000, 1000, 0.15); // Expected output: "Net Salary: $6950.00"
 //Function expression to calculate the final price
 let calculateDiscount = function(price, discountRate){
     let finalPrice = price - (price * discountRate); //Calculating the final price by subtracting the discount
-    console.log(`Final Prive: $${finalPrice.toFixed(2)}`); //Logging the final price 
+    console.log(`Final Price: $${finalPrice.toFixed(2)}`); //Logging the final price 
 }
 
 //Test cases
@@ -64,7 +64,7 @@ calculateLoanPayment(5000, 0.07, 3); // "Total Payment: $6050.00"
 //Task 6: Higher-Order Functions
 function filterLargeTransactions(transactions, filterFunction) { //Function to filter large transactions
     let result = transactions.filter(filterFunction);//Applying the filter function to get large transactions
-    console.log ("Updated array;",result); //Logging the filtered transactions 
+    console.log ("Large transaction:",result); //Logging the filtered transactions 
 }; 
 
 // Test case
@@ -90,11 +90,8 @@ cart(35); // "Total Cart Value: $55"
 
 //Task 8: Recursion in JaveScript
 function calculateSavings(years, amount) { //Recursive function that projects the savings growth by 5%
-    if (years === 0) { 
-        return `Projected Savings: $${amount.toFixed(2)}`;
-    }
-    if (years > 10) years = 10; // Limit growth to 10 years
-    return calculateSavings(years - 1, amount * 1.05);  //Increasing the amount by 5% and calling the function recursively 
+    if (years >= 10) return `Projected savings: $${amount.toFixed(2)}`; //Checking if the years reached 10
+    return calculateSavings(years + 1, amount * 1.05);//Increasing the amount by 5% and calling the function recursively 
 }
 
 // Test Cases
